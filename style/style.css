@@ -8,4 +8,78 @@
 body {
   min-height: 100vh;
   font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  padding: 0 2em;
+}
+
+.red-text {
+  color: hsl(0deg, 36%, 70%);
+}
+
+header {
+  padding: 2em 0;
+}
+
+#showcase {
+  min-height: 250px;
+  background: url("../images/hero-mobile.jpg") no-repeat;
+}
+
+main {
+  text-align: center;
+  padding: 4em 0;
+}
+main .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+main h1 .red-text {
+  font-weight: 200;
+}
+main p {
+  line-height: 1.4;
+}
+
+.input-with-button {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  border: 1px solid hsl(0deg, 36%, 70%);
+  border-radius: 30px;
+}
+.input-with-button input::-moz-placeholder {
+  color: hsl(0deg, 36%, 70%);
+}
+.input-with-button input::placeholder {
+  color: hsl(0deg, 36%, 70%);
+}
+.input-with-button input, .input-with-button button {
+  padding: 1.2em 2em;
+  flex: 1 0 auto;
+  border: 0;
+  outline: 0;
+}
+.input-with-button button {
+  position: relative;
+  z-index: 1000;
+  margin: -1px;
+  box-shadow: 0 10px 10px hsl(0deg, 36%, 70%);
+  border-radius: 30px;
+  background: url("../images/icon-arrow.svg") center center no-repeat, linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+}
+
+footer {
+  text-align: center;
+  padding: 0 2em 2em;
+}
+footer a {
+  color: hsl(0deg, 93%, 68%);
 }/*# sourceMappingURL=style.css.map */
