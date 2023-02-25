@@ -21,7 +21,14 @@
         </div>
       </header>
 
-      <div id="showcase"></div>
+      <picture id="hero">
+        <source media="(min-width: 576px)" srcset="./images/hero-desktop.jpg" class="hero-img" />
+        <img
+          src="./images/hero-mobile.jpg"
+          alt="Beautiful woman"
+          class="hero-img"
+        />
+      </picture>
 
       <main>
         <div class="container">
@@ -44,15 +51,21 @@
           </form>
         </div>
       </main>
+
+      <footer>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://github.com/rafaeldevvv">Rafael Maia</a>.
+        </p>
+      </footer>
     </div>
 
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="https://github.com/rafaeldevvv">Rafael Maia</a>.
-      </p>
-    </footer>
+    <script>
+      document
+        .querySelector("form")
+        .addEventListener("submit", (e) => e.preventDefault());
+    </script>
   </body>
 </html>
