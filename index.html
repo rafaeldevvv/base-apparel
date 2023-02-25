@@ -22,7 +22,11 @@
       </header>
 
       <picture id="hero">
-        <source media="(min-width: 576px)" srcset="./images/hero-desktop.jpg" class="hero-img" />
+        <source
+          media="(min-width: 576px)"
+          srcset="./images/hero-desktop.jpg"
+          class="hero-img"
+        />
         <img
           src="./images/hero-mobile.jpg"
           alt="Beautiful woman"
@@ -41,13 +45,15 @@
           <form>
             <div class="form-field">
               <input
-                type="text"
-                name=""
-                id="inEmail"
+                type="email"
+                name="email"
                 placeholder="Email Address"
+                autofocus
               />
               <button type="submit"></button>
+              <img src="./images/icon-error.svg" alt="" class="failure-icon" />
             </div>
+            <p class="failure-text" style="margin-top: 10px"></p>
           </form>
         </div>
       </main>
@@ -63,9 +69,23 @@
     </div>
 
     <script>
-      document
-        .querySelector("form")
-        .addEventListener("submit", (e) => e.preventDefault());
+      const emailExp = /^[\w\d]+@\w+\.\w{2,3}$/;
+
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let field = e.target.querySelector(".form-field");
+        let outMessage = e.target.querySelector(".failure-text");
+        let email = e.target.elements.email.value;
+
+        if (!emailExp.test(email)) {
+          field.classList.add("failure");
+          outMessage.textContent = 'Please provide a valid email';
+        } else {
+          field.classList.remove("failure");
+          outMessage.textContent = "👍";
+        }
+      });
     </script>
   </body>
 </html>
