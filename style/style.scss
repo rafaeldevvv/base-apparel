@@ -48,7 +48,7 @@ main {
       letter-spacing: 10px;
 
       .red-text {
-         font-weight: 200;
+         font-weight: 300;
       }
    }
 
@@ -57,32 +57,39 @@ main {
    }
 }
 
-.input-with-button {
+.form-field {
    width: 100%;
-   overflow: hidden;
-   display: flex;
-   border: 1px solid $desaturated-red;
-   border-radius: 30px;
+   position: relative;
+   
+   input, button {
+      border: 0;
+      outline: 0;
+      display: block;
+      border-radius: 30px;
+      padding: 1.2em;
+   }
 
+   input {
+      border: 1px solid $desaturated-red;
+      width: 100%;
+   }
    input::placeholder {
       color: $desaturated-red;
    }
 
-   input, button {
-      padding: 1.2em 2em;
-      flex: 1 0 auto;
-      border: 0;
-      outline: 0;
+   button {
+      position: absolute;
+      z-index: 1;
+      cursor: pointer;
+      inset: 0 0 0 auto;
+      width: 22.5%;
+      
+      box-shadow: 0 15px 35px rgba(255,0,0,0.2);
+      background: url("../images/icon-arrow.svg") center center no-repeat, $second-gradient;
    }
 
-   button {
-      position: relative;
-      z-index: 1000;
-      margin: -1px;
-      
-      box-shadow: 0 10px 10px $desaturated-red;
-      border-radius: 30px;
-      background: url("../images/icon-arrow.svg") center center no-repeat, $second-gradient;
+   button:hover {
+      background: $first-gradient;
    }
 }
 
@@ -94,3 +101,4 @@ footer {
       color: $soft-red;
    }
 }
+
