@@ -75,6 +75,7 @@ main p {
 .form-field input {
   border: 1px solid hsl(0, 36%, 70%);
   width: 100%;
+  padding-right: 34%;
 }
 .form-field input::-moz-placeholder {
   color: hsl(0, 36%, 70%);
@@ -104,6 +105,9 @@ main p {
 }
 
 @media (max-width: 300px) {
+  .form-field input {
+    padding-right: 43%;
+  }
   .form-field .failure-icon {
     width: 20px;
     height: 20px;

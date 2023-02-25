@@ -86,6 +86,7 @@ main {
   input {
     border: 1px solid $desaturated-red;
     width: 100%;
+    padding-right: 34%;
   }
   input::placeholder {
     color: $desaturated-red;
@@ -120,6 +121,10 @@ main {
 
 @media (max-width: 300px) {
   .form-field {
+    input {
+      padding-right: 43%;
+    }
+
     .failure-icon {
       width: 20px;
       height: 20px;
