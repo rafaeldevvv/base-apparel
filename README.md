@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [here](https://github.com/rafaeldevvv/base-apparel)
+- Live Site URL: [here](https://rafaeldevvv.github.io/base-apparel/)
 
 ## My process
 
@@ -41,6 +41,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - SASS
+- JavaScript
 
 ### What I learned
 
@@ -57,7 +58,6 @@ I knew about this before but it was the first time I used it and it was quite us
 ```
 
 This was a challenge at first but after some thought I figured out a way to position these.
-
 ```scss
 .form-field {
   position: relative;
@@ -120,7 +120,7 @@ if (!emailExp.test(email)) {
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I want to reinforce my knowledge on responsive web design.
 
 ### Useful resources
 
